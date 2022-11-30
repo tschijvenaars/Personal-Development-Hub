@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { MatInputModule } from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +22,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TodoListComponent } from './pages/home/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     LoginComponent,
     HomeComponent,
     WeatherComponent,
+    TodoListComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSidenavModule,
+    MatInputModule,
     MatIconModule,
+    FormsModule,
     MatButtonModule,
     MatToolbarModule,
     LayoutModule,
@@ -48,6 +54,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatCardModule,
     MatMenuModule,
     MatCheckboxModule,
+    HttpClientModule,
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],

@@ -7,11 +7,11 @@ import { WeatherComponent } from './pages/weather/weather.component';
 import { AuthGuard } from './services/auth.service';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent }, //canActivate: [AuthGuard] },
-  { path: 'health', component: HealthComponent }, //canActivate: [AuthGuard] },
-  { path: 'weather', component: WeatherComponent }, //canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'health', component: HealthComponent, canActivate: [AuthGuard] },
+  { path: 'weather', component: WeatherComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
