@@ -25,6 +25,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TodoListComponent } from './pages/home/todo-list/todo-list.component';
+import { DayOverviewComponent } from './pages/home/day-overview/day-overview.component';
+import { WishListComponent } from './pages/home/wish-list/wish-list.component';
+import { WishAdderComponent } from './pages/home/wish-adder/wish-adder.component';
+import { TodoAdderComponent } from './pages/home/todo-adder/todo-adder.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,10 @@ import { TodoListComponent } from './pages/home/todo-list/todo-list.component';
     HomeComponent,
     WeatherComponent,
     TodoListComponent,
+    DayOverviewComponent,
+    TodoAdderComponent,
+    WishListComponent,
+    WishAdderComponent,
   ],
   imports: [
     BrowserModule,

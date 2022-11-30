@@ -16,6 +16,7 @@ export class HomeComponent {
       if (matches) {
         return [
           {
+            cols: 1,
             cols1: 1,
             rows1: 1,
             cols2: 1,
@@ -30,13 +31,14 @@ export class HomeComponent {
 
       return [
         {
-          cols1: 2,
+          cols: 2,
+          cols1: 1,
           rows1: 1,
           cols2: 1,
           rows2: 1,
-          cols3: 1,
-          rows3: 2,
-          cols4: 1,
+          cols3: 2,
+          rows3: 1,
+          cols4: 2,
           rows4: 1,
         },
       ];

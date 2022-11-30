@@ -1,6 +1,6 @@
   <div class="grid-container">
     <h1 class="mat-h1">Dashboard</h1>
-    <mat-grid-list *ngFor="let card of cards | async"  cols="2" rowHeight="350px">
+    <mat-grid-list *ngFor="let card of cards | async"  cols={{card.cols}} rowHeight="400px">
       <mat-grid-tile [colspan]="card.cols1" [rowspan]="card.rows1">
         <mat-card class="dashboard-card">   
           <mat-card-header>
@@ -10,35 +10,48 @@
           </mat-card-header>
           <mat-card-content><hr></mat-card-content>
           <mat-card-content class="dashboard-card-content" [style.overflow]="'auto'">
-            <app-todo-list></app-todo-list>
+            <app-todo-list ></app-todo-list>
           </mat-card-content>
+          <mat-card-content>
+            <hr>
+        </mat-card-content>
+          <mat-card-content>
+            <app-todo-adder></app-todo-adder>
+        </mat-card-content>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="card.cols2" [rowspan]="card.rows2">
         <mat-card class="dashboard-card">   
           <mat-card-header>
             <mat-card-title>
-                Card 2
+                Wishes
             </mat-card-title>
           </mat-card-header>
-          <mat-card-content class="dashboard-card-content">
-            <div>Card Content Here</div>
+          <mat-card-content><hr></mat-card-content>
+          <mat-card-content class="dashboard-card-content" [style.overflow]="'auto'">
+            <app-wish-list ></app-wish-list>
           </mat-card-content>
+          <mat-card-content>
+            <hr>
+        </mat-card-content>
+          <mat-card-content>
+            <app-wish-adder></app-wish-adder>
+        </mat-card-content>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="card.cols3" [rowspan]="card.rows3">
         <mat-card class="dashboard-card">   
           <mat-card-header>
             <mat-card-title>
-                Card 3
+                Overview
             </mat-card-title>
           </mat-card-header>
           <mat-card-content class="dashboard-card-content">
-            <div>Card Content Here</div>
+            <app-day-overview></app-day-overview>
           </mat-card-content>
         </mat-card>
       </mat-grid-tile>
-      <mat-grid-tile [colspan]="card.cols4" [rowspan]="card.rows4">
+      <!-- <mat-grid-tile [colspan]="card.cols4" [rowspan]="card.rows4">
         <mat-card class="dashboard-card">   
           <mat-card-header>
             <mat-card-title>
@@ -49,7 +62,7 @@
             <div>Card Content Here</div>
           </mat-card-content>
         </mat-card>
-      </mat-grid-tile>
+      </mat-grid-tile> -->
     </mat-grid-list>
   </div>
   
