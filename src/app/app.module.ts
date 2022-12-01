@@ -29,6 +29,7 @@ import { DayOverviewComponent } from './pages/home/day-overview/day-overview.com
 import { WishListComponent } from './pages/home/wish-list/wish-list.component';
 import { WishAdderComponent } from './pages/home/wish-adder/wish-adder.component';
 import { TodoAdderComponent } from './pages/home/todo-adder/todo-adder.component';
+import { SoloMetricComponent } from './pages/health/solo-metric/solo-metric.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { TodoAdderComponent } from './pages/home/todo-adder/todo-adder.component
     TodoAdderComponent,
     WishListComponent,
     WishAdderComponent,
+    SoloMetricComponent,
   ],
   imports: [
     BrowserModule,
