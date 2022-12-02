@@ -1,12 +1,12 @@
 .grid-container {
-  margin: 14px;
+  margin: 8px;
 }
 
 .top-tiles {
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
-app-solo-metric {
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
+.card-elements {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
 }

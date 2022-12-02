@@ -27,9 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { TodoListComponent } from './pages/home/todo-list/todo-list.component';
 import { DayOverviewComponent } from './pages/home/day-overview/day-overview.component';
 import { WishListComponent } from './pages/home/wish-list/wish-list.component';
-import { WishAdderComponent } from './pages/home/wish-adder/wish-adder.component';
-import { TodoAdderComponent } from './pages/home/todo-adder/todo-adder.component';
 import { SoloMetricComponent } from './pages/health/solo-metric/solo-metric.component';
+import { GraphComponent } from './pages/health/graph/graph.component';
+import { ListComponent } from './pages/home/list/list.component';
 
 @NgModule({
   declarations: [
@@ -41,10 +41,10 @@ import { SoloMetricComponent } from './pages/health/solo-metric/solo-metric.comp
     WeatherComponent,
     TodoListComponent,
     DayOverviewComponent,
-    TodoAdderComponent,
     WishListComponent,
-    WishAdderComponent,
     SoloMetricComponent,
+    GraphComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,

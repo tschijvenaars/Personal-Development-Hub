@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-solo-metric',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./solo-metric.component.css'],
 })
 export class SoloMetricComponent {
-  title = '';
-  valueTitle = '';
-  value = '';
+  @Input() title = '';
+  @Input() valueTitle = '';
+  @Input() value = '';
 }

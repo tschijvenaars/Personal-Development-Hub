@@ -1,0 +1,19 @@
+mat-card {
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+}
+
+.todo-formfield {
+  margin-top: 12px;
+  width: 100%;
+}
+
+mat-list {
+    flex-grow: 1;
+    border: 3px solid green;
+    overflow: auto;
+}
+
+
+
