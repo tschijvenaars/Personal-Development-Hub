@@ -1,7 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
-import { TodoListComponent } from './todo-list/todo-list.component';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +9,13 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 })
 export class HomeComponent {
   constructor(private breakpointObserver: BreakpointObserver) {}
+  todoListTitle = 'To Do List';
+  todoFieldLabel = 'Add To Do';
+  todoPlaceholder = 'E.g. call for reservation...';
+
+  wishListTitle = 'Wish List';
+  wishFieldLabel = 'Add Wish';
+  wishPlaceholder = 'E.g. go horseriding...';
 
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {

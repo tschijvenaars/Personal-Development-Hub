@@ -24,7 +24,7 @@ export class ListComponent {
   ];
 
   onClick() {
-    this.todos.push(new ToDo('hoi', false));
+    this.todos.unshift(new ToDo('hoi', false));
   }
 
   onChangeDemo(ob: MatCheckboxChange) {
