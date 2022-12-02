@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { ToDo } from 'src/app/models/todo.model';
 
@@ -8,6 +8,9 @@ import { ToDo } from 'src/app/models/todo.model';
   styleUrls: ['./list.component.css'],
 })
 export class ListComponent {
+  @Input() listName = '';
+  @Input() formFieldLabel = '';
+  @Input() inputPlaceholder = '';
   todos: ToDo[] = [
     new ToDo('todo 1', false),
     new ToDo('todo 2', false),

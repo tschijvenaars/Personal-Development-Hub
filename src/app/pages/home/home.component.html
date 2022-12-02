@@ -1,18 +1,21 @@
-  <div class="grid-container">
-    <h1 class="mat-h1">Dashboard</h1>
-    <mat-grid-list *ngFor="let card of cards | async"  cols={{card.cols}} rowHeight="400px">
-      <mat-grid-tile  [colspan]="card.cols1" [rowspan]="card.rows1">
-        <app-list class="card-elements"></app-list>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="card.cols2" [rowspan]="card.rows2">
-        <app-list class="card-elements"></app-list>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="card.cols3" [rowspan]="card.rows3">
-        
-          <app-list class="card-elements"></app-list>
-      </mat-grid-tile>
-      <!-- <mat-grid-tile [colspan]="card.cols4" [rowspan]="card.rows4">
-        <mat-card class="dashboard-card">   
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list
+    *ngFor="let card of cards | async"
+    cols="{{ card.cols }}"
+    rowHeight="400px"
+  >
+    <mat-grid-tile [colspan]="card.cols1" [rowspan]="card.rows1">
+      <app-list class="card-elements"></app-list>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="card.cols2" [rowspan]="card.rows2">
+      <app-list class="card-elements"></app-list>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="card.cols3" [rowspan]="card.rows3">
+      <mat-card class="card-elements"></mat-card>
+    </mat-grid-tile>
+    <!-- <mat-grid-tile [colspan]="card.cols4" [rowspan]="card.rows4">
+        <mat-card class="dashboard-card">
           <mat-card-header>
             <mat-card-title>
                 Card 4
@@ -23,6 +26,5 @@
           </mat-card-content>
         </mat-card>
       </mat-grid-tile> -->
-    </mat-grid-list>
-  </div>
-  
+  </mat-grid-list>
+</div>
