@@ -3,9 +3,9 @@ export class ToDo {
   public completed: boolean;
   public id: number;
 
-  constructor(description: string, completed: boolean) {
+  constructor(description: string) {
     this.description = description;
-    this.completed = completed;
+    this.completed = false;
     this.id = 1;
   }
 }

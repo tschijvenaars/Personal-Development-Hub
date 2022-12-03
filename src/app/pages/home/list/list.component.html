@@ -3,7 +3,7 @@
   <hr />
   <div [style.overflow]="'auto'">
     <mat-selection-list #items color="primary">
-      <mat-list-option *ngFor="let item of todos">
+      <mat-list-option *ngFor="let item of elements">
         {{ item.description }}
       </mat-list-option>
     </mat-selection-list>
@@ -11,7 +11,7 @@
   <hr />
   <mat-form-field class="todo-formfield">
     <mat-label>{{ formFieldLabel }}</mat-label>
-    <input
+    <input [(ngModel)]="inputFieldValue"
       matInput
       placeholder="{{ inputPlaceholder }}"
       (keydown.enter)="onClick()"

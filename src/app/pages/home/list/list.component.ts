@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { ToDo } from 'src/app/models/todo.model';
+import { Wish } from 'src/app/models/wish.model';
 
 @Component({
   selector: 'app-list',
@@ -11,20 +12,12 @@ export class ListComponent {
   @Input() listName = '';
   @Input() formFieldLabel = '';
   @Input() inputPlaceholder = '';
-  todos: ToDo[] = [
-    new ToDo('todo 1', false),
-    new ToDo('todo 2', false),
-    new ToDo('todo 3', false),
-    new ToDo('todo 1', false),
-    new ToDo('todo 2', false),
-    new ToDo('todo 3', false),
-    new ToDo('todo 1', false),
-    new ToDo('todo 2', false),
-    new ToDo('todo 3', false),
-  ];
+  elements: any[] = [];
+  inputFieldValue = '';
 
   onClick() {
-    this.todos.unshift(new ToDo('hoi', false));
+    this.elements.unshift(new Wish(this.inputFieldValue));
+    this.inputFieldValue = '';
   }
 
   onChangeDemo(ob: MatCheckboxChange) {
