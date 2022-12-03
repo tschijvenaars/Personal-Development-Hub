@@ -12,7 +12,8 @@ export class ListComponent {
   @Input() listName = '';
   @Input() formFieldLabel = '';
   @Input() inputPlaceholder = '';
-  elements: any[] = [];
+
+  elements: ToDo[] = [];
   inputFieldValue = '';
 
   onClick() {

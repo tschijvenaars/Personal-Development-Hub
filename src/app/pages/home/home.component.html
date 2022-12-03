@@ -6,25 +6,23 @@
     rowHeight="400px"
   >
     <mat-grid-tile [colspan]="card.cols1" [rowspan]="card.rows1">
-      <app-list class="card-elements" [listName]="todoListTitle" [formFieldLabel]="todoFieldLabel" [inputPlaceholder]="todoPlaceholder"></app-list>
+      <app-list
+        class="card-elements"
+        [listName]="todoListTitle"
+        [formFieldLabel]="todoFieldLabel"
+        [inputPlaceholder]="todoPlaceholder"
+      ></app-list>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="card.cols2" [rowspan]="card.rows2">
-      <app-list class="card-elements" [listName]="wishListTitle" [formFieldLabel]="wishFieldLabel" [inputPlaceholder]="wishPlaceholder"></app-list>
+      <app-list
+        class="card-elements"
+        [listName]="wishListTitle"
+        [formFieldLabel]="wishFieldLabel"
+        [inputPlaceholder]="wishPlaceholder"
+      ></app-list>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="card.cols3" [rowspan]="card.rows3">
       <mat-card class="card-elements"></mat-card>
     </mat-grid-tile>
-    <!-- <mat-grid-tile [colspan]="card.cols4" [rowspan]="card.rows4">
-        <mat-card class="dashboard-card">
-          <mat-card-header>
-            <mat-card-title>
-                Card 4
-            </mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="dashboard-card-content">
-            <div>Card Content Here</div>
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile> -->
   </mat-grid-list>
 </div>

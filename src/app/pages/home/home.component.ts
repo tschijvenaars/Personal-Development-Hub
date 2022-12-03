@@ -1,6 +1,8 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
+import { ToDo } from 'src/app/models/todo.model';
+import { Wish } from 'src/app/models/wish.model';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +18,9 @@ export class HomeComponent {
   wishListTitle = 'Wish List';
   wishFieldLabel = 'Add Wish';
   wishPlaceholder = 'E.g. go horseriding...';
+
+  todoList: ToDo[] = [];
+  wishList: Wish[] = [];
 
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
