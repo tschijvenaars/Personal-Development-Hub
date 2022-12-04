@@ -3,12 +3,14 @@
         <h2>Login</h2>
         <mat-form-field appearance="fill">
             <mat-label>Username</mat-label>
-            <input matInput [(ngModel)]="username" type="text" placeholder="Username">
+            <input matInput [(ngModel)]="username" 
+            (keydown.enter)="onLogin()" type="text" placeholder="Username">
             
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Enter your password</mat-label>
-            <input matInput [(ngModel)]="password" [type]="(maskPassword) ? 'password' : 'text'">
+            <input matInput [(ngModel)]="password" 
+            (keydown.enter)="onLogin()" [type]="(maskPassword) ? 'password' : 'text'">
             <button mat-icon-button matSuffix (click)="maskPassword = !maskPassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="maskPassword">
               <mat-icon>{{maskPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>

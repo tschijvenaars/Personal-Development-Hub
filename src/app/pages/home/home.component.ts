@@ -22,6 +22,16 @@ export class HomeComponent {
   todoList: ToDo[] = [];
   wishList: Wish[] = [];
 
+  addTodo(newItem: string) {
+    this.todoList.unshift(new ToDo(newItem));
+    console.log(this.todoList);
+  }
+
+  addWish(newItem: string) {
+    this.wishList.unshift(new Wish(newItem));
+    console.log(this.wishList);
+  }
+
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
       if (matches) {

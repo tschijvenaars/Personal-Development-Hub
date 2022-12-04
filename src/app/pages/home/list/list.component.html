@@ -2,7 +2,7 @@
   <mat-card-title>{{ listName }}</mat-card-title>
   <hr />
   <div [style.overflow]="'auto'">
-    <mat-selection-list #items color="primary">
+    <mat-selection-list #items [(ngModel)]="elements" color="primary">
       <mat-list-option *ngFor="let item of elements">
         {{ item.description }}
       </mat-list-option>
@@ -14,9 +14,9 @@
     <input [(ngModel)]="inputFieldValue"
       matInput
       placeholder="{{ inputPlaceholder }}"
-      (keydown.enter)="onClick()"
+      (keydown.enter)="addNewItem()"
     />
-    <button color="primary" mat-icon-button matSuffix (click)="onClick()">
+    <button color="primary" mat-icon-button matSuffix (click)="addNewItem()"> 
       <mat-icon>send</mat-icon>
     </button>
   </mat-form-field>

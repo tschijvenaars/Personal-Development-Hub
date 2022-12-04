@@ -27,7 +27,7 @@
       </button>
       <span>Dashboard</span>
       <span class="toolbar-empty-space"></span>
-      <span><button mat-flat-button color="primary">Log out</button></span>
+      <span><button mat-flat-button color="primary" (click)="authService.logout()">Log out</button></span>
     </mat-toolbar>
     <body>
       <router-outlet></router-outlet>

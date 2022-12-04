@@ -11,6 +11,8 @@
         [listName]="todoListTitle"
         [formFieldLabel]="todoFieldLabel"
         [inputPlaceholder]="todoPlaceholder"
+        [elements]="todoList"
+        (newItemEvent)="addTodo($event)"
       ></app-list>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="card.cols2" [rowspan]="card.rows2">
@@ -19,6 +21,8 @@
         [listName]="wishListTitle"
         [formFieldLabel]="wishFieldLabel"
         [inputPlaceholder]="wishPlaceholder"
+        [elements]="wishList"
+        (newItemEvent)="addWish($event)"
       ></app-list>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="card.cols3" [rowspan]="card.rows3">
