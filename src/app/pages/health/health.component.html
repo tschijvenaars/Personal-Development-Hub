@@ -2,23 +2,28 @@
   <mat-grid-list cols="1" gutterSize="8px">
     <mat-grid-list class="top-tiles" cols="3" gutterSize="8px" rowHeight="2:1">
       <mat-grid-tile>
-        <app-solo-metric class="card-elements"
+        <app-solo-metric
+          class="card-elements"
           [title]="WeightTitle"
           [valueTitle]="WeightValueTitle"
           [value]="WeightValue"
         ></app-solo-metric>
       </mat-grid-tile>
       <mat-grid-tile>
-        <app-solo-metric class="card-elements"
+        <app-solo-metric
+          class="card-elements"
           [title]="HeartRateTitle"
           [valueTitle]="HeartRateValueTitle"
-          [value]="HeartRateValue"></app-solo-metric>
+          [value]="HeartRateValue"
+        ></app-solo-metric>
       </mat-grid-tile>
       <mat-grid-tile>
-        <app-solo-metric class="card-elements"
-        [title]="BloodPressureTitle"
-        [valueTitle]="BloodPressureValueTitle"
-        [value]="BloodPressureValue"></app-solo-metric>
+        <app-solo-metric
+          class="card-elements"
+          [title]="BloodPressureTitle"
+          [valueTitle]="BloodPressureValueTitle"
+          [value]="BloodPressureValue"
+        ></app-solo-metric>
       </mat-grid-tile>
     </mat-grid-list>
     <mat-grid-list

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
+import { MatListOption } from '@angular/material/list';
 import { ToDo } from 'src/app/models/todo.model';
 import { Wish } from 'src/app/models/wish.model';
 
@@ -17,16 +18,10 @@ export class ListComponent {
   inputFieldValue = '';
   @Output() newItemEvent = new EventEmitter<string>();
 
-  onClick() {
-    this.elements.unshift(new Wish(this.inputFieldValue));
-    this.inputFieldValue = '';
-  }
-
   addNewItem() {
-    this.newItemEvent.emit(this.inputFieldValue);
-  }
-
-  onChangeDemo(ob: MatCheckboxChange) {
-    console.log('checked: ' + ob.checked);
+    if (this.inputFieldValue != null && this.inputFieldValue.length > 2) {
+      this.newItemEvent.emit(this.inputFieldValue);
+      this.inputFieldValue = '';
+    }
   }
 }

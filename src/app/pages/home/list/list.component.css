@@ -6,15 +6,22 @@ mat-card {
   padding-left: 24px;
   padding-right: 24px;
 }
+
 hr {
   width: 100%;
 }
 
 .todo-formfield {
   width: 100%;
-  margin-top:auto;
+  margin-top: auto;
 }
 
-mat-selection-list {
-  overflow: auto;
+.elementList {
+  display: block;
+}
+
+.listDiv {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 100%;
 }

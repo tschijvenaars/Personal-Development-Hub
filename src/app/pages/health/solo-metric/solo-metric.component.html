@@ -1,6 +1,12 @@
 <mat-card>
-  <mat-card-title>{{title}}</mat-card-title>
-  <mat-card-content>
-    <p>{{value}} {{valueTitle}}</p>
-  </mat-card-content>
+  <span class="textItem">
+    <mat-card-title>{{ title }}</mat-card-title>
+    <p>{{ value }} {{ valueTitle }}</p>
+  </span>
+  <span class="empty-space"></span>
+  <div class="fabItem">
+    <button mat-fab color="primary">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
 </mat-card>
