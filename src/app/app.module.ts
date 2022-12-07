@@ -27,6 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { SoloMetricComponent } from './pages/health/solo-metric/solo-metric.component';
 import { GraphComponent } from './pages/health/graph/graph.component';
 import { ListComponent } from './pages/home/list/list.component';
+import { DatatableComponent } from './pages/health/datatable/datatable.component';
+import { MeasurementDialog } from './pages/health/measuredialog/measuredialog.component';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,8 @@ import { ListComponent } from './pages/home/list/list.component';
     SoloMetricComponent,
     GraphComponent,
     ListComponent,
+    DatatableComponent,
+    MeasurementDialog,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +64,7 @@ import { ListComponent } from './pages/home/list/list.component';
     MatMenuModule,
     MatCheckboxModule,
     HttpClientModule,
+    MatDialogModule,
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],

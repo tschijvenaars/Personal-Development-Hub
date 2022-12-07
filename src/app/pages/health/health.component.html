@@ -1,6 +1,10 @@
+<div class="color-block">
 <div class="grid-container">
+  <div class="measurement-div">
+    <button mat-raised-button color="warn" (click)="openMeasurementDialog()">Add Measurement</button>
+  </div>
   <mat-grid-list cols="1" gutterSize="8px">
-    <mat-grid-list class="top-tiles" cols="3" gutterSize="8px" rowHeight="2:1">
+    <mat-grid-list class="top-tiles" cols="3" gutterSize="8px" rowHeight="3:1">
       <mat-grid-tile>
         <app-solo-metric
           class="card-elements"
@@ -27,7 +31,7 @@
       </mat-grid-tile>
     </mat-grid-list>
     <mat-grid-list
-      class="bottom-tiles"
+      class="graph-tiles"
       cols="2"
       gutterSize="8px"
       rowHeight="1.5:1"
@@ -46,4 +50,25 @@
       </mat-grid-tile>
     </mat-grid-list>
   </mat-grid-list>
+  <mat-grid-list
+      class="table-tiles"
+      cols="2"
+      gutterSize="8px"
+      rowHeight="1.5:1"
+    >
+      <mat-grid-tile>
+        <app-graph class="card-elements"></app-graph>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-graph class="card-elements"></app-graph>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-graph class="card-elements"></app-graph>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-graph class="card-elements"></app-graph>
+      </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
 </div>
