@@ -1,3 +1,16 @@
+mat-grid-tile {
+  background-color: pink;
+  display: block;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  margin: auto;
+  padding: auto;
+  flex-direction: column;
+}
+
 .grid-container {
   margin: 8px;
 }

@@ -19,8 +19,13 @@ export class HomeComponent {
   wishFieldLabel = 'Add Wish';
   wishPlaceholder = 'E.g. go horseriding...';
 
-  todoList: ToDo[] = [];
-  wishList: Wish[] = [];
+  todoList: ToDo[] = [
+    new ToDo('todo'),
+    new ToDo('todo'),
+    new ToDo('todo'),
+    new ToDo('todo'),
+  ];
+  wishList: Wish[] = [new ToDo('wish'), new ToDo('wish'), new ToDo('wish')];
 
   addTodo(newItem: string) {
     this.todoList.unshift(new ToDo(newItem));
@@ -37,30 +42,30 @@ export class HomeComponent {
       if (matches) {
         return [
           {
-            cols: 1,
-            cols1: 1,
-            rows1: 1,
-            cols2: 1,
-            rows2: 1,
-            cols3: 1,
-            rows3: 1,
-            cols4: 1,
-            rows4: 1,
+            colsNum: 1,
+            todoCol: 1,
+            todoRow: 1,
+            wishCol: 1,
+            wishRow: 1,
+            todayInfoCol: 1,
+            todayInfoRow: 1,
+            emptyCol: 1,
+            emptyRow: 1,
           },
         ];
       }
 
       return [
         {
-          cols: 2,
-          cols1: 1,
-          rows1: 1,
-          cols2: 1,
-          rows2: 1,
-          cols3: 2,
-          rows3: 1,
-          cols4: 2,
-          rows4: 1,
+          colsNum: 3,
+          todoCol: 1,
+          todoRow: 1,
+          wishCol: 1,
+          wishRow: 1,
+          todayInfoCol: 1,
+          todayInfoRow: 2,
+          emptyCol: 2,
+          emptyRow: 1,
         },
       ];
     })

@@ -24,7 +24,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { DayOverviewComponent } from './pages/home/day-overview/day-overview.component';
 import { SoloMetricComponent } from './pages/health/solo-metric/solo-metric.component';
 import { GraphComponent } from './pages/health/graph/graph.component';
 import { ListComponent } from './pages/home/list/list.component';
@@ -37,7 +36,6 @@ import { ListComponent } from './pages/home/list/list.component';
     LoginComponent,
     HomeComponent,
     WeatherComponent,
-    DayOverviewComponent,
     SoloMetricComponent,
     GraphComponent,
     ListComponent,

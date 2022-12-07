@@ -1,12 +1,17 @@
 <mat-card>
   <mat-card-title>{{ listName }}</mat-card-title>
-  <div [style.overflow]="'auto'" class="listDiv">
-    <mat-list color="primary">
-      <mat-checkbox class="elementList" *ngFor="let item of elements">
-        {{ item.description }}
-      </mat-checkbox>
-    </mat-list>
-  </div>
+  <mat-list>
+    <div *ngFor="let item of elements">
+      <hr />
+      <div class="list-element">
+        <mat-checkbox>{{ item.description }}</mat-checkbox>
+        <button class="remove-button" mat-flat-button color="warn">
+          Remove
+        </button>
+      </div>
+    </div>
+  </mat-list>
+
   <mat-form-field class="todo-formfield">
     <mat-label>{{ formFieldLabel }}</mat-label>
     <input

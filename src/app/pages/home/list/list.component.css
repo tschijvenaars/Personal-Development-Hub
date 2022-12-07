@@ -7,6 +7,25 @@ mat-card {
   padding-right: 24px;
 }
 
+mat-list {
+  display: flexbox;
+  padding-right: 7px;
+  padding-left: 7px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.list-element {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.remove-button {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 hr {
   width: 100%;
 }
@@ -16,12 +35,6 @@ hr {
   margin-top: auto;
 }
 
-.elementList {
-  display: block;
-}
-
-.listDiv {
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 100%;
+.todo-complete {
+  text-decoration: line-through;
 }
