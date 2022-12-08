@@ -1,74 +1,80 @@
 <div class="color-block">
-<div class="grid-container">
-  <div class="measurement-div">
-    <button mat-raised-button color="warn" (click)="openMeasurementDialog()">Add Measurement</button>
-  </div>
-  <mat-grid-list cols="1" gutterSize="8px">
-    <mat-grid-list class="top-tiles" cols="3" gutterSize="8px" rowHeight="3:1">
-      <mat-grid-tile>
-        <app-solo-metric
-          class="card-elements"
-          [title]="WeightTitle"
-          [valueTitle]="WeightValueTitle"
-          [value]="WeightValue"
-        ></app-solo-metric>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-solo-metric
-          class="card-elements"
-          [title]="HeartRateTitle"
-          [valueTitle]="HeartRateValueTitle"
-          [value]="HeartRateValue"
-        ></app-solo-metric>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-solo-metric
-          class="card-elements"
-          [title]="BloodPressureTitle"
-          [valueTitle]="BloodPressureValueTitle"
-          [value]="BloodPressureValue"
-        ></app-solo-metric>
-      </mat-grid-tile>
+  <div class="grid-container">
+    <div class="measurement-div">
+      <button mat-raised-button color="warn" (click)="openMeasurementDialog()">
+        Add Measurement
+      </button>
+    </div>
+    <mat-grid-list cols="1" gutterSize="8px">
+      <mat-grid-list
+        class="top-tiles"
+        cols="3"
+        gutterSize="8px"
+        rowHeight="3:1"
+      >
+        <mat-grid-tile>
+          <app-solo-metric
+            class="top-card-elements"
+            [title]="WeightTitle"
+            [valueTitle]="WeightValueTitle"
+            [value]="WeightValue"
+          ></app-solo-metric>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <app-solo-metric
+            class="top-card-elements"
+            [title]="HeartRateTitle"
+            [valueTitle]="HeartRateValueTitle"
+            [value]="HeartRateValue"
+          ></app-solo-metric>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <app-solo-metric
+            class="top-card-elements"
+            [title]="BloodPressureTitle"
+            [valueTitle]="BloodPressureValueTitle"
+            [value]="BloodPressureValue"
+          ></app-solo-metric>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list
+        class="graph-tiles"
+        cols="2"
+        gutterSize="8px"
+        rowHeight="1.5:1"
+      >
+        <mat-grid-tile>
+          <app-graph class="bottom-card-elements"></app-graph>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <app-graph class="bottom-card-elements"></app-graph>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <app-graph class="bottom-card-elements"></app-graph>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <app-graph class="bottom-card-elements"></app-graph>
+        </mat-grid-tile>
+      </mat-grid-list>
     </mat-grid-list>
     <mat-grid-list
-      class="graph-tiles"
-      cols="2"
-      gutterSize="8px"
-      rowHeight="1.5:1"
-    >
-      <mat-grid-tile>
-        <app-graph class="card-elements"></app-graph>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-graph class="card-elements"></app-graph>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-graph class="card-elements"></app-graph>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-graph class="card-elements"></app-graph>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </mat-grid-list>
-  <mat-grid-list
       class="table-tiles"
       cols="2"
       gutterSize="8px"
       rowHeight="1.5:1"
     >
       <mat-grid-tile>
-        <app-graph class="card-elements"></app-graph>
+        <app-datatable class="bottom-card-elements"></app-datatable>
       </mat-grid-tile>
       <mat-grid-tile>
-        <app-graph class="card-elements"></app-graph>
+        <app-datatable class="bottom-card-elements"></app-datatable>
       </mat-grid-tile>
       <mat-grid-tile>
-        <app-graph class="card-elements"></app-graph>
+        <app-datatable class="bottom-card-elements"></app-datatable>
       </mat-grid-tile>
       <mat-grid-tile>
-        <app-graph class="card-elements"></app-graph>
+        <app-datatable class="bottom-card-elements"></app-datatable>
       </mat-grid-tile>
     </mat-grid-list>
-</div>
-
+  </div>
 </div>

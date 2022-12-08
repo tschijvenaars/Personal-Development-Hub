@@ -2,22 +2,22 @@ mat-grid-tile {
   display: inline-flex;
 }
 
-.color-block{
-  position:absolute;
-  background-color: blue;
+.color-block {
+  position: absolute;
+  background-color: grey;
   width: 100%;
-  height: 300px;
+  height: 350px;
   margin-top: 0px;
-  align-content:stretch ;
+  align-content: stretch;
 }
 
-.measurement-div{
+.measurement-div {
   width: 100%;
   margin: 24px;
   text-align: center;
 }
 
-.measurement-div button{
+.measurement-div button {
   margin: 12px;
 }
 
@@ -32,11 +32,14 @@ mat-grid-tile {
   height: 10%;
 }
 
-.card-elements {
+.top-card-elements {
+  width: calc(100% - 10px);
+}
+
+.bottom-card-elements {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
 }
 
-.bottom-tiles{
-
+.bottom-tiles {
 }

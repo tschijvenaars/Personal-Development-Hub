@@ -30,6 +30,11 @@ import { ListComponent } from './pages/home/list/list.component';
 import { DatatableComponent } from './pages/health/datatable/datatable.component';
 import { MeasurementDialog } from './pages/health/measuredialog/measuredialog.component';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+import { ToDoListService } from './services/todolist.service';
+import { WishListService } from './services/wishlist.service';
 
 @NgModule({
   declarations: [
@@ -65,8 +70,11 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
     MatCheckboxModule,
     HttpClientModule,
     MatDialogModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatNativeDateModule,
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, ToDoListService, WishListService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

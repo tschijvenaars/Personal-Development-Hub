@@ -6,6 +6,11 @@ export interface DialogData {
   animal: string;
 }
 
+interface Food {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-measuredialog',
   templateUrl: './measuredialog.component.html',
@@ -20,4 +25,10 @@ export class MeasurementDialog {
   onNoClick(): void {
     this.dialogRef.close();
   }
+
+  foods: Food[] = [
+    { value: 'steak-0', viewValue: 'Steak' },
+    { value: 'pizza-1', viewValue: 'Pizza' },
+    { value: 'tacos-2', viewValue: 'Tacos' },
+  ];
 }

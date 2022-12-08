@@ -1,12 +1,35 @@
-<h1 mat-dialog-title>Hi </h1>
-<div mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <mat-form-field appearance="fill">
-    <mat-label>Favorite Animal</mat-label>
-    <input matInput [(ngModel)]="data.animal">
+<h1 mat-dialog-title>Add Measurement</h1>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Measurement Type</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{ food.viewValue }}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
-</div>
+
+  <mat-form-field>
+    <mat-label>Date of Measurement</mat-label>
+    <input matInput [matDatepicker]="picker" />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Value</mat-label>
+    <input matInput [(ngModel)]="data.animal" />
+  </mat-form-field>
+</mat-dialog-content>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button mat-dialog-close [disabled]="data.animal">Ok</button>
+  <button mat-flat-button color="primary" (click)="onNoClick()">Cancel</button>
+  <button
+    mat-flat-button
+    color="primary"
+    mat-dialog-close
+    [disabled]="data.animal"
+  >
+    Add
+  </button>
 </div>

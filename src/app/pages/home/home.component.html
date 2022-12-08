@@ -13,6 +13,7 @@
         [inputPlaceholder]="todoPlaceholder"
         [elements]="todoList"
         (newItemEvent)="addTodo($event)"
+        (deleteItemEvent)="removeToDo($event)"
       ></app-list>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="card.wishCol" [rowspan]="card.wishRow">
@@ -23,6 +24,7 @@
         [inputPlaceholder]="wishPlaceholder"
         [elements]="wishList"
         (newItemEvent)="addWish($event)"
+        (deleteItemEvent)="removeWish($event)"
       ></app-list>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="card.todayInfoCol" [rowspan]="card.todayInfoRow">

@@ -1,11 +1,16 @@
 <mat-card>
   <mat-card-title>{{ listName }}</mat-card-title>
   <mat-list>
-    <div *ngFor="let item of elements">
+    <div *ngFor="let item of elements; let i = index">
       <hr />
       <div class="list-element">
         <mat-checkbox>{{ item.description }}</mat-checkbox>
-        <button class="remove-button" mat-flat-button color="warn">
+        <button
+          class="remove-button"
+          mat-flat-button
+          color="warn"
+          (click)="removeItem(i)"
+        >
           Remove
         </button>
       </div>

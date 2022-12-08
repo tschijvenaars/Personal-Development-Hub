@@ -17,11 +17,16 @@ export class ListComponent {
 
   inputFieldValue = '';
   @Output() newItemEvent = new EventEmitter<string>();
+  @Output() deleteItemEvent = new EventEmitter<number>();
 
   addNewItem() {
     if (this.inputFieldValue != null && this.inputFieldValue.length > 2) {
       this.newItemEvent.emit(this.inputFieldValue);
       this.inputFieldValue = '';
     }
+  }
+
+  removeItem(index: number) {
+    this.deleteItemEvent.emit(index);
   }
 }
