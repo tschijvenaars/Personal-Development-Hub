@@ -3,15 +3,18 @@
   <mat-form-field>
     <mat-label>Measurement Type</mat-label>
     <mat-select>
-      <mat-option *ngFor="let food of foods" [value]="food.value">
-        {{ food.viewValue }}
+      <mat-option
+        *ngFor="let selector of measurementSelectors"
+        [value]="selector.value"
+      >
+        {{ selector.viewValue }}
       </mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>Date of Measurement</mat-label>
-    <input matInput [matDatepicker]="picker" />
+    <input matInput [matDatepicker]="picker" [(ngModel)]="data.date" />
     <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
@@ -19,7 +22,7 @@
 
   <mat-form-field>
     <mat-label>Value</mat-label>
-    <input matInput [(ngModel)]="data.animal" />
+    <input matInput [(ngModel)]="data.value" />
   </mat-form-field>
 </mat-dialog-content>
 <div mat-dialog-actions>
@@ -28,7 +31,8 @@
     mat-flat-button
     color="primary"
     mat-dialog-close
-    [disabled]="data.animal"
+    [disabled]="!data.value && !data.date && !data.measurement"
+    (click)="onAddClick()"
   >
     Add
   </button>

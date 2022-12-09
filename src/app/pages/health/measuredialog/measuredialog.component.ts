@@ -3,10 +3,12 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export interface DialogData {
-  animal: string;
+  measurement: string;
+  date: Date;
+  value: number;
 }
 
-interface Food {
+interface MeasuementSelector {
   value: string;
   viewValue: string;
 }
@@ -26,9 +28,24 @@ export class MeasurementDialog {
     this.dialogRef.close();
   }
 
-  foods: Food[] = [
-    { value: 'steak-0', viewValue: 'Steak' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' },
+  onAddClick() {
+    console.log(
+      'All values: ' +
+        this.data.date +
+        ' and ' +
+        this.data.value +
+        ' and ' +
+        this.data.measurement
+    );
+  }
+
+  measurementSelectors: MeasuementSelector[] = [
+    { value: 'bloodpressure-0', viewValue: 'Blood Pressure' },
+    { value: 'heartrate-1', viewValue: 'Heart Rate' },
+    { value: 'weight-2', viewValue: 'Weight' },
+    { value: 'inbodymuscle-3', viewValue: 'InBody Muscle Mass' },
+    { value: 'inbodyfatpercentage-4', viewValue: 'InBody Fat Percentage' },
+    { value: 'inbodyfatmass-5', viewValue: 'InBody Fat Mass' },
+    { value: 'inbodybmi-6', viewValue: 'InBody BMI' },
   ];
 }

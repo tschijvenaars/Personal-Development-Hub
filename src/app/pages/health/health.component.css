@@ -12,7 +12,7 @@ mat-grid-tile {
 }
 
 .measurement-div {
-  width: 100%;
+  width: auto;
   margin: 24px;
   text-align: center;
 }
@@ -22,7 +22,6 @@ mat-grid-tile {
 }
 
 .grid-container {
-  margin: 8px;
 }
 
 .top-tiles {
