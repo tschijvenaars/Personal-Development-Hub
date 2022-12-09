@@ -2,10 +2,10 @@
 <mat-dialog-content>
   <mat-form-field>
     <mat-label>Measurement Type</mat-label>
-    <mat-select>
+    <mat-select [(ngModel)]="data.measurement">
       <mat-option
         *ngFor="let selector of measurementSelectors"
-        [value]="selector.value"
+        [value]="selector.viewValue"
       >
         {{ selector.viewValue }}
       </mat-option>
@@ -22,7 +22,7 @@
 
   <mat-form-field>
     <mat-label>Value</mat-label>
-    <input matInput [(ngModel)]="data.value" />
+    <input matInput type="number" [(ngModel)]="data.value" />
   </mat-form-field>
 </mat-dialog-content>
 <div mat-dialog-actions>

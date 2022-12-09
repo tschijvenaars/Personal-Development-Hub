@@ -22,7 +22,11 @@ export class MeasurementDialog {
   constructor(
     public dialogRef: MatDialogRef<MeasurementDialog>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) {}
+  ) {
+    data.date = new Date();
+    data.value = 0;
+    data.measurement = 'Weight';
+  }
 
   onNoClick(): void {
     this.dialogRef.close();
