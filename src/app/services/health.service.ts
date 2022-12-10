@@ -4,10 +4,10 @@ import { InBody } from '../models/inbody.model';
 import { Weight } from '../models/weight.model';
 
 export class HealthService {
-  weightList: Weight[];
-  bloodPressureList: BloodPressure[];
-  heartRateList: HeartRate[];
-  inbodyList: InBody[];
+  weightList: Weight[] = [];
+  bloodPressureList: BloodPressure[] = [];
+  heartRateList: HeartRate[] = [];
+  inbodyList: InBody[] = [];
 
   constructor() {
     this.weightList.push(new Weight(90.2, new Date()));
@@ -17,18 +17,38 @@ export class HealthService {
   }
 
   getWeightList() {
+    // const sortedDesc = this.weightList.sort(
+    //   (objA, objB) => objB.date.getTime() - objA.date.getTime(),
+    // );
+
     return this.weightList;
   }
 
-  getBloodpressureList() {
+  getBloodPressureList() {
     return this.bloodPressureList;
   }
 
-  getHeartrateList() {
+  getHeartRateList() {
     return this.heartRateList;
   }
 
   getInBodyList() {
     return this.inbodyList;
+  }
+
+  getLatestWeight() {
+    return this.weightList[0];
+  }
+
+  getLatestBloodPressure() {
+    return this.bloodPressureList[0];
+  }
+
+  getLatestHeartRate() {
+    return this.heartRateList[0];
+  }
+
+  getLatestInBody() {
+    return this.inbodyList[0];
   }
 }

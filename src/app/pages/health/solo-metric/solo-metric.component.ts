@@ -9,4 +9,5 @@ export class SoloMetricComponent {
   @Input() title = '';
   @Input() valueTitle = '';
   @Input() value = '';
+  @Input() date = '';
 }
