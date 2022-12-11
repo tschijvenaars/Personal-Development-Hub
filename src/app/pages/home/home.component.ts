@@ -5,6 +5,7 @@ import { ToDo } from 'src/app/models/todo.model';
 import { Wish } from 'src/app/models/wish.model';
 import { ToDoListService } from 'src/app/services/todolist.service';
 import { WishListService } from 'src/app/services/wishlist.service';
+import { OpenWeatherService } from 'src/app/services/openweather.service';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private todoService: ToDoListService,
-    private wishService: WishListService
+    private wishService: WishListService,
+    private openWeatherService: OpenWeatherService
   ) {}
 
   ngOnInit(): void {
@@ -32,6 +34,10 @@ export class HomeComponent implements OnInit {
   wishFieldLabel = 'Add Wish';
   wishPlaceholder = 'E.g. go horseriding...';
   wishList: Wish[] = [];
+
+  getCurrentWeather() {
+    this.openWeatherService.makeDemoCall();
+  }
 
   addTodo(newItem: string) {
     this.todoService.addToDo(newItem);

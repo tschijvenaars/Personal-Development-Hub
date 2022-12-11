@@ -36,6 +36,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ToDoListService } from './services/todolist.service';
 import { WishListService } from './services/wishlist.service';
 import { HealthService } from './services/health.service';
+import { OpenWeatherService } from './services/openweather.service';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,13 @@ import { HealthService } from './services/health.service';
     MatSelectModule,
     MatNativeDateModule,
   ],
-  providers: [AuthGuard, ToDoListService, WishListService, HealthService],
+  providers: [
+    AuthGuard,
+    ToDoListService,
+    WishListService,
+    HealthService,
+    OpenWeatherService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
