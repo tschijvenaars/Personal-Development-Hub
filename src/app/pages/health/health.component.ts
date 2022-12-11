@@ -59,22 +59,58 @@ export class HealthComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       try {
-        if (result.measurement == 'Weight') {
-          this.healthService.setWeight(Number(result.value), result.date);
-          console.log('Set weight');
-        } else if (result.measurement == 'Blood Pressure') {
-          this.healthService.setBloodPressure(
-            result.value.toString(),
-            result.date
-          );
-          console.log('Set bloodpressure');
-        } else if (result.measurement == 'Heart Rate') {
-          this.healthService.setHeartRate(Number(result.value), result.date);
-          console.log('Set heartrate');
+        if (result === undefined) {
+          if (result.measurement == 'Weight') {
+            this.healthService.setWeight(Number(result.value), result.date);
+            console.log('Set weight');
+          } else if (result.measurement == 'Blood Pressure') {
+            this.healthService.setBloodPressure(
+              result.value.toString(),
+              result.date
+            );
+            console.log('Set bloodpressure');
+          } else if (result.measurement == 'Heart Rate') {
+            this.healthService.setHeartRate(Number(result.value), result.date);
+            console.log('Set heartrate');
+          }
         }
       } catch (err) {
         console.log(err);
       }
     });
   }
+
+  // cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+  //   map(({ matches }) => {
+  //     if (matches) {
+  //       return [
+  //         {
+  //           colsNum: 1,
+  //           todoCol: 1,
+  //           todoRow: 1,
+  //           wishCol: 1,
+  //           wishRow: 1,
+  //           todayInfoCol: 1,
+  //           todayInfoRow: 1,
+  //           emptyCol: 1,
+  //           emptyRow: 1,
+  //         },
+  //       ];
+  //     }
+
+  //     return [
+  //       {
+  //         colsNum: 3,
+  //         todoCol: 1,
+  //         todoRow: 1,
+  //         wishCol: 1,
+  //         wishRow: 1,
+  //         todayInfoCol: 1,
+  //         todayInfoRow: 2,
+  //         emptyCol: 2,
+  //         emptyRow: 1,
+  //       },
+  //     ];
+  //   })
+  // );
 }
