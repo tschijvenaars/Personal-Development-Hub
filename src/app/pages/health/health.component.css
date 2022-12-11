@@ -22,6 +22,7 @@ mat-grid-tile {
 }
 
 .grid-container {
+  margin: 20px;
 }
 
 .top-tiles {

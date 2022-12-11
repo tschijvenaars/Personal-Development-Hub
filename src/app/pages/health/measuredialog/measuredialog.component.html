@@ -22,7 +22,7 @@
 
   <mat-form-field>
     <mat-label>Value</mat-label>
-    <input matInput type="number" [(ngModel)]="data.value" />
+    <input matInput [(ngModel)]="data.value" />
   </mat-form-field>
 </mat-dialog-content>
 <div mat-dialog-actions>
@@ -32,7 +32,7 @@
     color="primary"
     mat-dialog-close
     [disabled]="!data.value && !data.date && !data.measurement"
-    (click)="onAddClick()"
+    [mat-dialog-close]="{value: data.value, date: data.date, measurement: data.measurement}"
   >
     Add
   </button>

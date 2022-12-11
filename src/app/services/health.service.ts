@@ -24,6 +24,18 @@ export class HealthService {
     return this.weightList;
   }
 
+  setWeight(value: number, date: Date) {
+    this.weightList.unshift(new Weight(value, date));
+  }
+
+  setBloodPressure(value: string, date: Date) {
+    this.bloodPressureList.unshift(new BloodPressure(value, date));
+  }
+
+  setHeartRate(value: number, date: Date) {
+    this.heartRateList.unshift(new HeartRate(value, date));
+  }
+
   getBloodPressureList() {
     return this.bloodPressureList;
   }

@@ -15,28 +15,28 @@
         <mat-grid-tile>
           <app-solo-metric
             class="top-card-elements"
-            [title]="WeightTitle"
-            [valueTitle]="WeightValueTitle"
-            [value]="WeightValue"
-            [date]="WeightDate"
+            [title]="weightTitle"
+            [valueTitle]="weightValueTitle"
+            [value]="weights[0].weight"
+            [date]="weights[0].date.toLocaleString()"
           ></app-solo-metric>
         </mat-grid-tile>
         <mat-grid-tile>
           <app-solo-metric
             class="top-card-elements"
-            [title]="HeartRateTitle"
-            [valueTitle]="HeartRateValueTitle"
-            [value]="HeartRateValue"
-            [date]="HeartRateDate"
+            [title]="heartRateTitle"
+            [valueTitle]="heartRateValueTitle"
+            [value]="heartRates[0].heartrate"
+            [date]="heartRates[0].date.toLocaleString()"
           ></app-solo-metric>
         </mat-grid-tile>
         <mat-grid-tile>
           <app-solo-metric
             class="top-card-elements"
-            [title]="BloodPressureTitle"
-            [valueTitle]="BloodPressureValueTitle"
-            [value]="BloodPressureValue"
-            [date]="BloodPressureDate"
+            [title]="bloodPressureTitle"
+            [valueTitle]="bloodPressureValueTitle"
+            [value]="bloodPressures[0].pressure"
+            [date]="bloodPressures[0].date.toLocaleString()"
           ></app-solo-metric>
         </mat-grid-tile>
       </mat-grid-list>
@@ -50,34 +50,31 @@
           <app-graph class="bottom-card-elements"></app-graph>
         </mat-grid-tile>
         <mat-grid-tile>
-          <app-graph class="bottom-card-elements"></app-graph>
+          <app-datatable class="bottom-card-elements"></app-datatable>
         </mat-grid-tile>
+
         <mat-grid-tile>
           <app-graph class="bottom-card-elements"></app-graph>
         </mat-grid-tile>
         <mat-grid-tile>
+          <app-datatable class="bottom-card-elements"></app-datatable>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
           <app-graph class="bottom-card-elements"></app-graph>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <app-datatable class="bottom-card-elements"></app-datatable>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <app-graph class="bottom-card-elements"></app-graph>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <app-datatable class="bottom-card-elements"></app-datatable>
         </mat-grid-tile>
       </mat-grid-list>
     </mat-grid-list>
-    <mat-grid-list
-      class="table-tiles"
-      cols="2"
-      gutterSize="8px"
-      rowHeight="1.5:1"
-    >
-      <mat-grid-tile>
-        <app-datatable class="bottom-card-elements"></app-datatable>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-datatable class="bottom-card-elements"></app-datatable>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-datatable class="bottom-card-elements"></app-datatable>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-datatable class="bottom-card-elements"></app-datatable>
-      </mat-grid-tile>
-    </mat-grid-list>
+     
   </div>
 </div>

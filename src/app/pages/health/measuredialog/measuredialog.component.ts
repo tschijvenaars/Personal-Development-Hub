@@ -1,12 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
-export interface DialogData {
-  measurement: string;
-  date: Date;
-  value: number;
-}
+import { HealthService } from 'src/app/services/health.service';
+import { DialogData } from '../health.component';
 
 interface MeasuementSelector {
   value: string;
@@ -30,17 +26,6 @@ export class MeasurementDialog {
 
   onNoClick(): void {
     this.dialogRef.close();
-  }
-
-  onAddClick() {
-    console.log(
-      'All values: ' +
-        this.data.date +
-        ' and ' +
-        this.data.value +
-        ' and ' +
-        this.data.measurement
-    );
   }
 
   measurementSelectors: MeasuementSelector[] = [
