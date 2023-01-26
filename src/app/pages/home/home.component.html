@@ -3,7 +3,7 @@
   <mat-grid-list
     *ngFor="let card of cards | async"
     cols="{{ card.colsNum }}"
-    rowHeight="400px"
+    rowHeight="600px"
   >
     <mat-grid-tile [colspan]="card.todoCol" [rowspan]="card.todoRow">
       <app-list
