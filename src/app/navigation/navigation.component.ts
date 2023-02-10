@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { AuthGuard } from '../services/auth.service';
+import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-navigation',
@@ -18,11 +19,16 @@ export class NavigationComponent {
     );
 
   authService: AuthGuard;
+  header: string = 'Home';
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    authService: AuthGuard
+    authService: AuthGuard,
+    private sharedService: SharedService
   ) {
     this.authService = authService;
+    this.sharedService.title.subscribe(val => {
+      this.header = val;
+    })
   }
 }

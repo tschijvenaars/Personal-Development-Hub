@@ -1,0 +1,70 @@
+<div class="plants-container">
+  <div class="plant-list">
+    <mat-card>
+      <div
+        class="plant-list-view"
+        *ngFor="let plant of plantList"
+        (click)="selectedPlant = plant"
+      >
+        <div class="plant-list-icon">
+          <img [src]="plant.image" alt="plants" />
+        </div>
+        <div class="plant-list-info">
+          <strong>{{ plant.plantName }}</strong>
+          <span>{{ plant.potSize }} plant</span>
+          <strong>{{ plant.price }}</strong>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div class="plant-description">
+    <mat-card class="plant-description-card">
+      <div class="plant-description-view">
+        <div class="plant-desc-image">
+          <img [src]="selectedPlant.image" alt="plants" />
+        </div>
+        <div class="plant-desc-info">
+          <div class="plant-name">{{ selectedPlant.plantName }}</div>
+          <div class="plant-info-description">
+            {{ selectedPlant.description }}
+          </div>
+          <div class="plant-info-overview">
+            <h2>Overview</h2>
+            <div class="plant-overview">
+              <div class="plant-overview-day">
+                <div class="plant-overview-icon success">
+                  <mat-icon>calendar_month</mat-icon>
+                </div>
+                <div class="plant-overview-day-info"><span class="success">{{ selectedPlant.days }}</span> Days</div>
+              </div>
+              <div class="plant-overview-humidity">
+                <div class="plant-overview-icon success">
+                  <mat-icon>invert_colors</mat-icon>
+                </div>
+                <div class="plant-overview-humidity-info">
+                  <span class="success">{{ selectedPlant.humidity }}</span> Humidity
+                </div>
+              </div>
+              <div class="plant-overview-diameter">
+                <div class="plant-overview-icon success">
+                  <mat-icon>close_fullscreen</mat-icon>
+                </div>
+                <div class="plant-overview-diameter-info">
+                  <span class="success">{{ selectedPlant.diameter }}</span> Diameter
+                </div>
+              </div>
+              <div class="plant-overview-height">
+                <div class="plant-overview-icon success">
+                  <mat-icon>bar_chart</mat-icon>
+                </div>
+                <div class="plant-overview-height-info">
+                  <span class="success">{{ selectedPlant.height }}</span> Height
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

@@ -1,13 +1,8 @@
-<div class="grid-container">
+<div class="dashboard-container">
   <h1 class="mat-h1">Dashboard</h1>
-  <mat-grid-list
-    *ngFor="let card of cards | async"
-    cols="{{ card.colsNum }}"
-    rowHeight="400px"
-  >
-    <mat-grid-tile [colspan]="card.todoCol" [rowspan]="card.todoRow">
+  <div class="home-grid">
+    <div class="todo-list-card">
       <app-list
-        class="card-elements"
         [listName]="todoListTitle"
         [formFieldLabel]="todoFieldLabel"
         [inputPlaceholder]="todoPlaceholder"
@@ -15,10 +10,9 @@
         (newItemEvent)="addTodo($event)"
         (deleteItemEvent)="removeToDo($event)"
       ></app-list>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="card.wishCol" [rowspan]="card.wishRow">
+    </div>
+    <div class="wish-list-card">
       <app-list
-        class="card-elements"
         [listName]="wishListTitle"
         [formFieldLabel]="wishFieldLabel"
         [inputPlaceholder]="wishPlaceholder"
@@ -26,15 +20,12 @@
         (newItemEvent)="addWish($event)"
         (deleteItemEvent)="removeWish($event)"
       ></app-list>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="card.todayInfoCol" [rowspan]="card.todayInfoRow">
-      <mat-card class="card-elements">
-        <mat-card-title> Today </mat-card-title>
-        <button mat-raised-button color="accent" (click)="getCurrentWeather()">Accent</button>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="card.emptyCol" [rowspan]="card.emptyRow">
-      <mat-card class="card-elements"></mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+    </div>
+    <div class="weather-card">
+      <app-weather-report></app-weather-report>
+    </div>
+    <div class="empty-card">
+      <mat-card class="card-elements"><mat-card-title> Empty </mat-card-title></mat-card>
+    </div>
+  </div>
 </div>

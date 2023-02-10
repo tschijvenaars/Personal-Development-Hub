@@ -1,0 +1,13 @@
+<mat-card class="card-elements">
+  <mat-card-title> This Week </mat-card-title>
+  <div class="temperature-details">
+    <div class="temp-data" *ngFor="let data of temperatureData">
+        <div class="temp-day">
+            <div class="temp-day">{{data.day}}</div>
+            <div class="temp-date">{{data.date}}</div>
+        </div>
+        <div class="temperature">{{data.temperature}}</div>
+        <img [src]="data.image" alt="temperature" height="30px"/>
+    </div>
+  </div>
+</mat-card>

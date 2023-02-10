@@ -37,6 +37,12 @@ import { ToDoListService } from './services/todolist.service';
 import { WishListService } from './services/wishlist.service';
 import { HealthService } from './services/health.service';
 import { OpenWeatherService } from './services/openweather.service';
+import { WeatherReportComponent } from './pages/home/weather-report/weather-report.component';
+import { WeatherInformationComponent } from './pages/weather/weather-information/weather-information.component';
+import { WeeklyTempratureComponent } from './pages/weather/weekly-temprature/weekly-temprature.component';
+import { PlantsComponent } from './pages/plants/plants.component';
+import { MatTableModule } from '@angular/material/table';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -51,6 +57,10 @@ import { OpenWeatherService } from './services/openweather.service';
     ListComponent,
     DatatableComponent,
     MeasurementDialog,
+    WeatherReportComponent,
+    WeatherInformationComponent,
+    WeeklyTempratureComponent,
+    PlantsComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +85,8 @@ import { OpenWeatherService } from './services/openweather.service';
     MatDatepickerModule,
     MatSelectModule,
     MatNativeDateModule,
+    MatTableModule,
+    NgApexchartsModule,
   ],
   providers: [
     AuthGuard,

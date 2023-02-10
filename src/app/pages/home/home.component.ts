@@ -6,6 +6,7 @@ import { Wish } from 'src/app/models/wish.model';
 import { ToDoListService } from 'src/app/services/todolist.service';
 import { WishListService } from 'src/app/services/wishlist.service';
 import { OpenWeatherService } from 'src/app/services/openweather.service';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-home',
@@ -17,8 +18,11 @@ export class HomeComponent implements OnInit {
     private breakpointObserver: BreakpointObserver,
     private todoService: ToDoListService,
     private wishService: WishListService,
-    private openWeatherService: OpenWeatherService
-  ) {}
+    private openWeatherService: OpenWeatherService,
+    private sharedService: SharedService
+  ) {
+    this.sharedService.setTitle('Home');
+  }
 
   ngOnInit(): void {
     this.todoList = this.todoService.getToDoList();
@@ -55,37 +59,37 @@ export class HomeComponent implements OnInit {
     this.wishService.removeFromWish(index);
   }
 
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          {
-            colsNum: 1,
-            todoCol: 1,
-            todoRow: 1,
-            wishCol: 1,
-            wishRow: 1,
-            todayInfoCol: 1,
-            todayInfoRow: 1,
-            emptyCol: 1,
-            emptyRow: 1,
-          },
-        ];
-      }
+  // cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+  //   map(({ matches }) => {
+  //     if (matches) {
+  //       return [
+  //         {
+  //           colsNum: 1,
+  //           todoCol: 1,
+  //           todoRow: 1,
+  //           wishCol: 1,
+  //           wishRow: 1,
+  //           todayInfoCol: 1,
+  //           todayInfoRow: 1,
+  //           emptyCol: 1,
+  //           emptyRow: 1,
+  //         },
+  //       ];
+  //     }
 
-      return [
-        {
-          colsNum: 3,
-          todoCol: 1,
-          todoRow: 1,
-          wishCol: 1,
-          wishRow: 1,
-          todayInfoCol: 1,
-          todayInfoRow: 2,
-          emptyCol: 2,
-          emptyRow: 1,
-        },
-      ];
-    })
-  );
+  //     return [
+  //       {
+  //         colsNum: 3,
+  //         todoCol: 1,
+  //         todoRow: 1,
+  //         wishCol: 1,
+  //         wishRow: 1,
+  //         todayInfoCol: 1,
+  //         todayInfoRow: 2,
+  //         emptyCol: 2,
+  //         emptyRow: 1,
+  //       },
+  //     ];
+  //   })
+  // );
 }

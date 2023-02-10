@@ -1,0 +1,27 @@
+mat-card {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.temp-day {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  width: 100px;
+}
+
+.temp-data {
+  display: flex;
+  margin: 24px 6px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temp-day, .temperature {
+    font-weight: bold;
+}
+
+.temp-date {
+  color: gray;
+}

@@ -1,0 +1,44 @@
+<mat-card class="card-elements">
+    <mat-card-title> Today </mat-card-title>
+    <div class="weather-grid-container">
+      <div class="temp-info">
+        <div class="temp-info-1">
+          <span><mat-icon>location_on</mat-icon>{{tempratureData.location}}</span>
+          <span>Today {{tempratureData.time}}</span>
+        </div>
+        <div class="temp-info-2">
+          <h2 class="temp-data">{{tempratureData.temperature}}</h2>
+          <div class="temp-data-info">{{tempratureData.tempratureDesc}}</div>
+        </div>
+        <div class="temp-info-3">
+            <span> <mat-icon>air</mat-icon>{{ tempratureData.pressure }}</span>
+            <span><mat-icon>invert_colors</mat-icon>{{ tempratureData.rain }}</span>
+            <span> <mat-icon>air</mat-icon>{{ tempratureData.wind }}</span>
+          </div>
+      </div>
+      <div class="rain-info">
+        <strong>Rain Chanse</strong>
+        <span class="desc-text">Today rain chanse</span>
+        <strong>{{tempratureData.rain}}</strong>
+      </div>
+      <div class="uv-info">
+        <strong>UV Index</strong>
+        <span class="desc-text">Today UV Index</span>
+        <strong>{{tempratureData.uv}}</strong>
+      </div>
+      <div class="wind-info">
+        <strong>Wind</strong>
+        <span class="desc-text">Today wind speed</span>
+        <strong>{{tempratureData.wind}}</strong>
+      </div>
+      <div class="pressure-info">
+        <strong>Pressure</strong>
+        <span class="desc-text">Today pressure</span>
+        <strong>{{tempratureData.pressure}}</strong>
+      </div>
+    </div>
+    <!-- <button mat-raised-button color="accent" (click)="getCurrentWeather()">
+          Accent
+        </button> -->
+  </mat-card>
+  

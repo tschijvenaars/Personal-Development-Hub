@@ -7,13 +7,10 @@ export class WishListService {
 
   constructor() {
     this.wishList = [
-      new Wish('wish1'),
-      new Wish('wish2'),
-      new Wish('wish3'),
-      new Wish('wish4'),
-      new Wish('wish5'),
-      new Wish('wish6'),
-      new Wish('wish7'),
+      new Wish('install Node JS', '', false, Math.floor(Math.random()*90000) + 10000+''),
+      new Wish('install Angular CLI', '', false, Math.floor(Math.random()*90000) + 10000+''),
+      new Wish('create App', '', false, Math.floor(Math.random()*90000) + 10000+''),
+      new Wish('Serve App', '', false, Math.floor(Math.random()*90000) + 10000+''),
     ];
   }
 
@@ -31,7 +28,9 @@ export class WishListService {
   }
 
   public addWish(description: string) {
-    this.wishList.unshift(new Wish(description));
+    this.wishList.unshift(
+      new Wish(description, '', false, Math.floor(Math.random()*90000) + 10000+'')
+      );
   }
 
   public removeFromWish(index: number) {

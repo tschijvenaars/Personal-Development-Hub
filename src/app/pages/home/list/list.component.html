@@ -2,19 +2,49 @@
   <mat-card-title>{{ listName }}</mat-card-title>
   <mat-list>
     <div *ngFor="let item of elements; let i = index">
-      <hr />
+      <mat-divider></mat-divider>
       <div class="list-element">
-        <mat-checkbox>{{ item.description }}</mat-checkbox>
-        <button
-          class="remove-button"
-          mat-flat-button
-          color="warn"
-          (click)="removeItem(i)"
-        >
-          Remove
-        </button>
+        <mat-checkbox>
+          <div
+            *ngIf="!item.editedDescription"
+            (click)="
+              $event.preventDefault(); item.editedDescription = item.description
+            "
+          >
+            {{ item.description }}
+          </div>
+          <input
+            type="text"
+            *ngIf="item.editedDescription"
+            [(ngModel)]="item.editedDescription"
+          />
+        </mat-checkbox>
+
+        <div class="action-btns">
+          <button
+            class="success-button"
+            mat-flat-button
+            color="success"
+            *ngIf="item.editedDescription"
+            (click)="
+              item.description = item.editedDescription;
+              item.editedDescription = ''
+            "
+          >
+            Save
+          </button>
+          <button
+            class="remove-button"
+            mat-flat-button
+            color="warn"
+            (click)="removeItem(i)"
+          >
+            Remove
+          </button>
+        </div>
       </div>
     </div>
+    <mat-divider></mat-divider>
   </mat-list>
 
   <mat-form-field class="todo-formfield">

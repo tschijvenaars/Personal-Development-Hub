@@ -1,80 +1,54 @@
 <div class="color-block">
-  <div class="grid-container">
+  <div class="top-container">
     <div class="measurement-div">
       <button mat-raised-button color="warn" (click)="openMeasurementDialog()">
-        Add Measurement
+        Add New Measurement
       </button>
     </div>
-    <mat-grid-list cols="1" gutterSize="8px">
-      <mat-grid-list
-        class="top-tiles"
-        cols="3"
-        gutterSize="8px"
-        rowHeight="3:1"
-      >
-        <mat-grid-tile>
-          <app-solo-metric
-            class="top-card-elements"
-            [title]="weightTitle"
-            [valueTitle]="weightValueTitle"
-            [value]="weights[0].weight"
-            [date]="weights[0].date.toLocaleString()"
-          ></app-solo-metric>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <app-solo-metric
-            class="top-card-elements"
-            [title]="heartRateTitle"
-            [valueTitle]="heartRateValueTitle"
-            [value]="heartRates[0].heartrate"
-            [date]="heartRates[0].date.toLocaleString()"
-          ></app-solo-metric>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <app-solo-metric
-            class="top-card-elements"
-            [title]="bloodPressureTitle"
-            [valueTitle]="bloodPressureValueTitle"
-            [value]="bloodPressures[0].pressure"
-            [date]="bloodPressures[0].date.toLocaleString()"
-          ></app-solo-metric>
-        </mat-grid-tile>
-      </mat-grid-list>
-      <mat-grid-list
-        class="graph-tiles"
-        cols="2"
-        gutterSize="8px"
-        rowHeight="1.5:1"
-      >
-        <mat-grid-tile>
-          <app-graph class="bottom-card-elements"></app-graph>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <app-datatable class="bottom-card-elements"></app-datatable>
-        </mat-grid-tile>
+    <div class="health-grid-cards">
+      <app-solo-metric
+        class="top-card-elements"
+        [title]="weightTitle"
+        [valueTitle]="weightValueTitle"
+        [value]="weights[0].weight"
+        [date]="weights[0].date.toLocaleString()"
+      ></app-solo-metric>
 
-        <mat-grid-tile>
-          <app-graph class="bottom-card-elements"></app-graph>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <app-datatable class="bottom-card-elements"></app-datatable>
-        </mat-grid-tile>
+      <app-solo-metric
+        class="top-card-elements"
+        [title]="heartRateTitle"
+        [valueTitle]="heartRateValueTitle"
+        [value]="heartRates[0].heartrate"
+        [date]="heartRates[0].date.toLocaleString()"
+      ></app-solo-metric>
 
-        <mat-grid-tile>
-          <app-graph class="bottom-card-elements"></app-graph>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <app-datatable class="bottom-card-elements"></app-datatable>
-        </mat-grid-tile>
+      <app-solo-metric
+        class="top-card-elements"
+        [title]="bloodPressureTitle"
+        [valueTitle]="bloodPressureValueTitle"
+        [value]="bloodPressures[0].pressure"
+        [date]="bloodPressures[0].date.toLocaleString()"
+      ></app-solo-metric>
 
-        <mat-grid-tile>
-          <app-graph class="bottom-card-elements"></app-graph>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <app-datatable class="bottom-card-elements"></app-datatable>
-        </mat-grid-tile>
-      </mat-grid-list>
-    </mat-grid-list>
-     
+      <app-solo-metric
+        class="top-card-elements"
+        [title]="musclePercentTitle"
+        [valueTitle]="musclePercentValueTitle"
+        [value]="musclePercent[0].bmi"
+        [date]="musclePercent[0].date.toLocaleString()"
+      ></app-solo-metric>
+    </div>
   </div>
+    <div class="health-grid-graph-table">
+      <app-graph class="bottom-card-elements" [chartOptions]="weightChartOptions"></app-graph>
+      <app-graph class="bottom-card-elements" [chartOptions]="heartRateChartOptions"></app-graph>
+      <app-graph class="bottom-card-elements" [chartOptions]="fatRateOptions"></app-graph>
+      <app-graph class="bottom-card-elements" [chartOptions]="muscleRateChartOptions"></app-graph>
+      <app-datatable class="bottom-card-elements" [title]="weightResponse.title" [displayedColumns]="weightResponse.displayedColumns" [dataSource]="weightResponse.data"></app-datatable>
+      <app-datatable class="bottom-card-elements" [title]="heartRateResponse.title" [displayedColumns]="heartRateResponse.displayedColumns" [dataSource]="heartRateResponse.data"></app-datatable>
+      <app-datatable class="bottom-card-elements" [title]="musclePercentResponse.title" [displayedColumns]="musclePercentResponse.displayedColumns" [dataSource]="musclePercentResponse.data"></app-datatable>
+      <app-datatable class="bottom-card-elements" [title]="fatPercentageResponse.title" [displayedColumns]="fatPercentageResponse.displayedColumns" [dataSource]="fatPercentageResponse.data"></app-datatable>
+     
+    </div>
+
 </div>

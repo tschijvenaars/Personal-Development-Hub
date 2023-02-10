@@ -1,45 +1,46 @@
-mat-grid-tile {
-  display: inline-flex;
+.health-grid-cards {
+  margin: 0 40px;
+  padding: 5px 0 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.color-block {
-  position: absolute;
-  background-color: grey;
-  width: 100%;
-  height: 350px;
-  margin-top: 0px;
-  align-content: stretch;
+.health-grid-graph-table {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
 .measurement-div {
-  width: auto;
-  margin: 24px;
   text-align: center;
+  padding: 40px 0 20px;
 }
 
-.measurement-div button {
-  margin: 12px;
+.top-container {
+  background-color: #101e36;
 }
 
-.grid-container {
-  margin: 20px;
+@media screen and (max-width: 1076px) {
+  .health-grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .health-grid-graph-table {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
 }
 
-.top-tiles {
-  margin-bottom: 8px;
-  display: inline-flexbox;
-  justify-content: flex-start;
-  height: 10%;
+@media screen and (max-width: 600px) {
+  .health-grid-cards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .health-grid-graph-table {
+    margin: 10px;
+  }
 }
 
-.top-card-elements {
-  width: calc(100% - 10px);
-}
-
-.bottom-card-elements {
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
-}
-
-.bottom-tiles {
-}

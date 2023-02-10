@@ -1,36 +1,26 @@
 mat-card {
   margin: auto;
-  width: 80%;
+  width: 95%;
   min-width: fit-content;
   min-height: fit-content;
   vertical-align: middle;
-  padding: 14px;
+  padding: 15px;
   bottom: 0px;
   display: grid;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
-
-.textItem {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 2;
-  grid-row-end: 2;
-}
-
-.fabItem {
-  grid-column-start: 5;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 2;
-  margin: auto;
-}
-
 mat-card-title {
-  font-size: 16px;
-  font-size: 1em;
+  font-size: 20px;
 }
 
 p {
   font-size: 16px;
   font-size: 1em;
 }
+
+.metric-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+

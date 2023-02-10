@@ -1,11 +1,13 @@
 export class Wish {
   public description: string;
+  public editedDescription: string;
   public completed: boolean;
-  public id: number;
+  public id: string;
 
-  constructor(description: string) {
+  constructor(description: string, editedDescription: string, completed: boolean, id: string) {
     this.description = description;
-    this.completed = false;
-    this.id = 1;
+    this.editedDescription = editedDescription;
+    this.completed = completed;
+    this.id = id;
   }
 }

@@ -1,11 +1,11 @@
 export class Weight {
   public weight: number;
   public date: Date;
-  public id: number;
+  public id: string;
 
-  constructor(weight: number, date: Date) {
+  constructor(weight: number, date: Date, id?: string) {
     this.weight = weight;
     this.date = date;
-    this.id = 1;
+    this.id = id;
   }
 }

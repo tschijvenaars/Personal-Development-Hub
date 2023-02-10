@@ -7,13 +7,10 @@ export class ToDoListService {
 
   constructor() {
     this.todoList = [
-      new ToDo('todo1'),
-      new ToDo('todo2'),
-      new ToDo('todo3'),
-      new ToDo('todo4'),
-      new ToDo('todo5'),
-      new ToDo('todo6'),
-      new ToDo('todo7'),
+      new ToDo('install Node JS', '', false, Math.floor(Math.random()*90000) + 10000+''),
+      new ToDo('install Angular CLI', '', false, Math.floor(Math.random()*90000) + 10000+''),
+      new ToDo('create App', '', false, Math.floor(Math.random()*90000) + 10000+''),
+      new ToDo('Serve App', '', false, Math.floor(Math.random()*90000) + 10000+''),
     ];
   }
 
@@ -31,7 +28,9 @@ export class ToDoListService {
   }
 
   public addToDo(description: string) {
-    this.todoList.unshift(new ToDo(description));
+    this.todoList.unshift(
+      new ToDo(description, '', false, Math.floor(Math.random()*90000) + 10000+'')
+    );
   }
 
   public removeFromToDo(index: number) {
