@@ -7,7 +7,7 @@ import { catchError, retry } from 'rxjs/operators';
 export class OpenWeatherService {
   lat = 52.0789181;
   lon = 4.3596872;
-  apiKey = '45617ddb848311a882efd55a6013d5ff';
+  apiKey = '';
   //   url ='https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units=metric&appid={API key}';
   result: any;
 
